@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome Home!</h1>
+    <p id="welcome-message"></p>
+    <button onclick="logout()">Logout</button>
+
+    <script>
+        // Retrieve the user's email from localStorage
+        const userEmail = localStorage.getItem('userEmail');
+
+        // Display the welcome message
+        const welcomeMessage = document.getElementById('welcome-message');
+        if (userEmail) {
+            welcomeMessage.textContent = `You have successfully logged in as ${userEmail}`;
+        } else {
+            // If no email found, redirect back to login page
+            window.location.href = 'login.html';
+        }
+
+        // Logout functionality
+        function logout() {
+            // Remove the email from localStorage
+            localStorage.removeItem('userEmail');
+
+            // Redirect to the login page
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+
+</html>
