@@ -1,0 +1,10 @@
+{
+  "name": "auth-web-app",
+  "version": "1.0.0",
+  "description": "Static web app for authentication",
+  "scripts": {
+    "build": "echo 'No build steps required'",
+    "test": "echo 'No tests'"
+  },
+  "dependencies": {}
+}
